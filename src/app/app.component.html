@@ -2,5 +2,7 @@
   {{title | upper}}<span *ngIf="isNice">(((ο(*ﾟ▽ﾟ*)ο)))</span>
 </h1>
 <input type="text" [(ngModel)]="title">
-<app-beer [beer]="myFavoriteBeer"></app-beer>
+<div *ngFor="let beer of beers">
+  <app-beer [beer]="beer"></app-beer>
+</div>
 <input type="button" value="いいね!" (click)="onNice($event)">

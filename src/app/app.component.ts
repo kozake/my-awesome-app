@@ -1,15 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Beer } from './beer/beer.model';
+import { BeerService } from './beer/beer.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Hello World!';
-  myFavoriteBeer = new Beer('1', 'モルツ', '最高だ');
+  beers: Beer[];
   isNice = false;
+
+  constructor(private beerService: BeerService) {
+  }
+
+  ngOnInit() {
+    this.beers = this.beerService.getBeers();
+  }
 
   onNice(event) {
     this.isNice = !this.isNice;

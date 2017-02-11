@@ -8,6 +8,8 @@ import { BeerComponent } from './beer/beer.component';
 import { HighlightDirective } from './directive/highlight.directive';
 import { UpperPipe } from './pipe/upper.pipe';
 
+import { BeerService } from './beer/beer.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { UpperPipe } from './pipe/upper.pipe';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    BeerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
