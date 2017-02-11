@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { BeerComponent } from './beer/beer.component';
+import { HighlightDirective } from './directive/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BeerComponent
+    BeerComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
