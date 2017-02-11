@@ -1,5 +1,5 @@
 <h1>
-  {{title}}
+  {{title}}<span *ngIf="isNice">(((ο(*ﾟ▽ﾟ*)ο)))</span>
 </h1>
 <input type="text" [(ngModel)]="title">
 <app-beer [beer]="myFavoriteBeer"></app-beer>

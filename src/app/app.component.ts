@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Beer } from './beer/beer.model'
+import { Beer } from './beer/beer.model';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +9,9 @@ import { Beer } from './beer/beer.model'
 export class AppComponent {
   title = 'Hello World!';
   myFavoriteBeer = new Beer('1', 'モルツ', '最高だ');
+  isNice = false;
 
   onNice(event) {
-    this.title += '(((ο(*ﾟ▽ﾟ*)ο)))';
+    this.isNice = !this.isNice;
   }
 }
