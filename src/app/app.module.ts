@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { BeerComponent } from './beer/beer.component';
 import { HighlightDirective } from './directive/highlight.directive';
+import { UpperPipe } from './pipe/upper.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     BeerComponent,
-    HighlightDirective
+    HighlightDirective,
+    UpperPipe
   ],
   imports: [
     BrowserModule,
