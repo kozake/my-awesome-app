@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Beer } from './beer/beer.model';
-import { BeerService } from './beer/beer.service';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +7,12 @@ import { BeerService } from './beer/beer.service';
 })
 export class AppComponent implements OnInit {
   title = 'Hello World!';
-  beers: Beer[];
   isNice = false;
 
-  constructor(private beerService: BeerService) {
+  constructor() {
   }
 
   ngOnInit() {
-    this.beers = this.beerService.getBeers();
   }
 
   onNice(event) {
