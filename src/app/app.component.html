@@ -2,4 +2,9 @@
   {{title | upper}}<span *ngIf="isNice">(((ο(*ﾟ▽ﾟ*)ο)))</span>
 </h1>
 <input type="text" [(ngModel)]="title">
+<div>
+  <a routerLink="">home</a>
+  <a routerLink="/beer-list">ビール</a>
+ </div>
+ <router-outlet></router-outlet>
 <input type="button" value="いいね!" (click)="onNice($event)">
