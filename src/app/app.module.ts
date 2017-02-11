@@ -7,12 +7,14 @@ import { BeerModule } from './beer/beer.module';
 import { AppComponent } from './app.component';
 import { HighlightDirective } from './directive/highlight.directive';
 import { UpperPipe } from './pipe/upper.pipe';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HighlightDirective,
-    UpperPipe
+    UpperPipe,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
