@@ -9,4 +9,8 @@ import { Beer } from './beer/beer.model'
 export class AppComponent {
   title = 'Hello World!';
   myFavoriteBeer = new Beer('1', 'モルツ', '最高だ');
+
+  onNice(event) {
+    this.title += '(((ο(*ﾟ▽ﾟ*)ο)))';
+  }
 }
