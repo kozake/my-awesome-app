@@ -7,11 +7,8 @@ export class HighlightDirective {
 
   @Input()
   set appHighlight(condition: any) {
-    if (condition) {
-      this.el.nativeElement.style.background = 'yellow';
-    } else {
-      this.el.nativeElement.style.background = null;
-    }
+    this.el.nativeElement.style.background
+      = condition ? 'yellow' : null;
   }
 
   constructor(private el: ElementRef) {
